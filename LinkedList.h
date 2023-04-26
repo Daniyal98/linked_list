@@ -19,4 +19,5 @@ class LinkedList
     public:
     LinkedList();
     void insert(T value);
+    void display();
 };

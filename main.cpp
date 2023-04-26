@@ -1,7 +1,11 @@
 #include <iostream>
+#include "LinkedList.h"
+#include "LinkedList.cpp" // for template classes, we need to explicitly include the cpp file
 using namespace std;
 
 int main()
 {
-    cout << "Hello, world!" << endl;
+    LinkedList<int> linked_list;
+    linked_list.insert(1);
+    linked_list.display();
 }

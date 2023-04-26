@@ -18,3 +18,16 @@ void LinkedList<T>::insert(T value)
         head = newNode;
     }
 }
+
+template <typename T>
+void LinkedList<T>::display()
+{
+    Node<T>* currentNode = head;
+    while (currentNode != NULL)
+    {
+        cout << currentNode->data << " -> ";
+        currentNode = currentNode->next;
+    }
+
+    cout << endl;
+}
