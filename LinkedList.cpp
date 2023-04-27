@@ -30,6 +30,25 @@ void LinkedList<T>::insert(T value)
 }
 
 template <typename T>
+void LinkedList<T>::insertAt(T value, int index)
+{
+    Node<T>* newNode = new Node<T>();
+    newNode->data = value;
+
+    Node<T>* currNode = head;
+    Node<T>* prevNode = NULL;
+    int i=0;
+    while (i < index)
+    {
+        prevNode = currNode;
+        currNode = currNode->next;
+        i++;
+    }
+    newNode->next = prevNode->next;
+    prevNode->next = newNode;
+}
+
+template <typename T>
 void LinkedList<T>::display()
 {
     Node<T>* currentNode = head;

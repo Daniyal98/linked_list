@@ -20,4 +20,5 @@ class LinkedList
     LinkedList();
     void insert(T value);
     void display();
+    void insertAt(T value, int index);
 };
