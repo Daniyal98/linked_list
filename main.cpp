@@ -7,5 +7,6 @@ int main()
 {
     LinkedList<int> linked_list;
     linked_list.insert(1);
+    linked_list.insert(2);
     linked_list.display();
 }

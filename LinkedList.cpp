@@ -16,7 +16,17 @@ void LinkedList<T>::insert(T value)
     if (head == NULL)
     {
         head = newNode;
+        return;
     }
+
+    Node<T>* currNode = head;
+
+    while (currNode->next != NULL)
+    {
+        currNode = currNode->next;
+    }
+
+    currNode->next = newNode;
 }
 
 template <typename T>
